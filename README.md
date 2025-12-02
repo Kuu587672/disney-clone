@@ -50,3 +50,32 @@ disney-clone/</br>
 3. Enabled horizontal scroll with smooth animation.
 4. Used useRef() to directly control the slider DOM element.
 5. Added hover border animation on movie posters.
+
+## Version-0.3
+
+### Genre-Based Movie Sections Added
+
+1. Implemented MovieList component for each genre.
+2. Fetching movies dynamically using TMDB’s getMovieByGenreId.
+3. Integrated movie posters with smooth horizontal scrolling.
+4. Added reusable MovieCard component.
+
+### Smart Horizontal Slider (for genre rows)
+
+1. Added left/right navigation arrows.
+2. Smooth scrolling with automatic calculated scroll distance.
+3. Improved UX with scroll-snap-like behavior.
+4. Fully responsive for mobile and desktop.
+
+### Bug Fixes
+
+1. Fixed repeated TMDB API calls.
+2. Fixed duplicate key warnings in lists.
+3. Cleaned broken image cases (null backdrop/poster).
+4. Production house video hover behavior fixed.
+
+### UI Enhancements
+
+1. Improved hover effects on movie posters.
+2. Center-aligned arrow controls for better UX.
+3. Cleaner spacing and visuals in genre rows.

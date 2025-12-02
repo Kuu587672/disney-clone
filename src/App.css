@@ -1,7 +1,9 @@
 #root {
   width: 100%;
-  max-width: 1280px;
+  max-width: none;   /* remove limit */
+  min-height: 100vh; /* full screen height */
   margin: 0 auto;
+  background-color: #131520;
 }
 
 .logo {

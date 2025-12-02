@@ -4,7 +4,7 @@ import React, {useState, useRef, useEffect} from 'react'
 import HeaderItem from './HeaderItem.jsx'
 
 // Import logos
-import logoWhite from './../assets/images/DisneyLogoWhite.png'
+import logoWhite from './../assets/images/disneyPlus.png'
 
 // Import Icons
 import {
@@ -55,7 +55,7 @@ function Header() {
                 {/* Desktop Menu */}
                 <div className='hidden md:flex gap-8 md:gap-10'>
                     {menu.map((item) => (
-                        <HeaderItem key={item.name} name={item.name} Icon={item.icon} />
+                        <HeaderItem key={`desktop-${item.name}`} name={item.name} Icon={item.icon} />
                     ))}
                 </div>
 
@@ -64,7 +64,11 @@ function Header() {
 
                     {/* Show 3 icons */}
                     {menu.slice(0, 3).map((item, index) => (
-                        <HeaderItem key={''} name={''} Icon={item.icon} />
+                        <HeaderItem 
+                        key={`mobile-top-${index}-${item.name || 'icon'}`} 
+                        name={''} 
+                        Icon={item.icon} 
+                        />
                     ))}
 
                     {/* More icon */}
@@ -83,8 +87,12 @@ function Header() {
 
                         {toggle && (
                             <div className='absolute right-0 mt-3 bg-[#121212] pt-5 pb-1 pl-6 pr-5 border border-gray-700 rounded-lg z-50'>
-                                {menu.slice(3).map((item) => (
-                                    <HeaderItem key={item.name} name={item.name} Icon={item.icon} />
+                                {menu.slice(3).map((item, index) => (
+                                    <HeaderItem 
+                                    key={`mobile-dropdown-${index}-${item.name}`} 
+                                    name={item.name} 
+                                    Icon={item.icon} 
+                                    />
                                 ))}
                             </div>
                         )}
