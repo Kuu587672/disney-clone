@@ -1,37 +1,15 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
+import { Routes, Route } from 'react-router-dom'
 import './App.css'
 
-// Components
-import Header from './components/Header.jsx'
-import Slider from './components/Slider.jsx'
-import ProductionHouse from './components/ProductionHouse.jsx'
-import GenreMovieList from './components/GenreMovieList.jsx'
-import Footer from './components/Footer.jsx'
+import Home from './pages/Home.jsx'
+import PlayMovie from './pages/PlayMovie.jsx'
 
 function App() {
   return (
-    <>
-      <div>
-        
-        {/* Header */}
-        <Header />
-
-        {/* Slider */}
-        <Slider />
-
-        {/* Production House */}
-        <ProductionHouse />
-        
-        {/* Movies sorted by genre */}
-        <GenreMovieList />
-
-        {/* Footer */}
-        <Footer />
-        
-      </div>
-    </>
+    <Routes>
+      <Route path="/" element={<Home />} />
+      <Route path="/play/:id" element={<PlayMovie />} />
+    </Routes>
   )
 }
 

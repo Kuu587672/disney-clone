@@ -12,7 +12,17 @@ const getMovieByGenreId = (id) => {
     return axios.get(`${movieByGenreBaseURL}${id}`);
 }
 
+const getMovieDetails = (id) => {
+    return axios.get(`${movieBaseURL}/movie/${id}?api_key=${api_key}`);
+}
+
+const getMovieVideos = (id) => {
+    return axios.get(`${movieBaseURL}/movie/${id}/videos?api_key=${api_key}`);
+}
+
 export default {
     getTrendingMovies,
     getMovieByGenreId,
+    getMovieDetails,
+    getMovieVideos,
 }

@@ -103,3 +103,24 @@ disney-clone/</br>
 2. Displays project information and attribution
 3. Matches the overall Disney-style dark theme
 4. Responsive across all screen sizes
+
+## Version-0.6
+
+### Play Movie Page
+
+1. Added a dedicated Play Movie page to watch trailers.
+2. Integrated YouTube iframe for trailer playback using TMDB video data.
+3. Trailer autoplay starts muted for better user experience.
+
+### Smart Video Loading Handling
+
+1. Implemented a loader overlay while the trailer iframe is loading.
+2. Loader is positioned absolutely over the video area to prevent layout shifts.
+3. Video is rendered immediately once trailer data is available.
+4. Loader disappears automatically when the iframe onLoad event fires.
+
+### Error-Safe Rendering
+
+1. Video iframe renders only when a valid trailerKey exists.
+2. Loader fallback ensures UI does not break if the video takes time to load.
+3. Component safely handles missing or delayed trailer data.
